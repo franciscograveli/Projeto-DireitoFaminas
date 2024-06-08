@@ -18,11 +18,81 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Estilo geral para a barra de rolagem (WebKit) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem vertical */
+    height: 12px;
+    /* Altura da barra de rolagem horizontal */
+}
+
+/* Estilo da track (fundo da barra de rolagem) */
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    /* Cor de fundo */
+    border-radius: 10px;
+    /* Cantos arredondados */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Sombra interna */
+}
+
+/* Estilo do thumb (parte móvel da barra de rolagem) */
+::-webkit-scrollbar-thumb {
+    background: #007BFF;
+    /* Cor principal do thumb */
+    border-radius: 10px;
+    /* Cantos arredondados */
+    border: 2px solid #f4f4f4;
+    /* Borda para espaçamento interno */
+}
+
+/* Estilo do thumb ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+    /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para rolagem fina (Firefox) */
+html {
+    scrollbar-width: large;
+    /* Define a largura da barra de rolagem como fina */
+    scrollbar-color: var(--title-color) #f4f4f4;
+    /* Cor do thumb e da track */
+}
+
+/* Estilo específico para barras de rolagem em contêineres (uso genérico) */
+.custom-scrollbar {
+    overflow-y: auto;
+    /* Ativa a rolagem vertical */
+    max-height: 400px;
+    /* Altura máxima antes de ativar a rolagem */
+}
+
+/* Estilo para barra de rolagem dentro do contêiner */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--bg-card-pesquisa);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-input);
+}
+
 input,
 button {
     border: none;
     border-radius: 4px;
     padding: .75rem 1rem;
+    transition: background-color 0.3s ease;
 }
 
 input {
@@ -35,6 +105,12 @@ button {
     background-color: var(--bg-btn);
     min-width: 100px;
     max-width: 150px;
+}
+
+button:hover {
+    background-color: #7f0000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 label {
@@ -88,8 +164,8 @@ form a:hover {
 
 
 .bg {
-    /* background-color: var(--bg); */
-    background-image: url('../img/mainBG.png');
+    background-color: var(--bg);
+    background-image: url('../img/bg-main.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center top;
@@ -99,8 +175,6 @@ form a:hover {
     position: relative;
     top: 0;
     left: 0;
-    /* Ajuste de margem para simular a posição vertical */
-    margin-top: 5vh;
 }
 
 
@@ -211,7 +285,105 @@ h2 {
     }
 
     .p-2 {
-        padding: 2rem;
+        padding: 2rem !important;
     }
 
+}
+
+#resultados {
+    max-height: 40vh;
+    overflow-y: auto;
+    margin-top: 2rem;
+    padding-right: 1rem;
+}
+
+/* Estilo para o card da empresa */
+.empresa-card {
+    max-width: 800px;
+    border: 1px solid #ddd;
+    /* Borda leve */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    padding: 16px;
+    /* Espaçamento interno */
+    margin: 16px 0;
+    /* Espaçamento vertical entre os cards */
+    background-color: #fff;
+    /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animação suave */
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.empresa-card:hover {
+    transform: translateY(-5px);
+    /* Elevação do card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Aumenta a sombra */
+}
+
+/* Títulos dentro do card */
+.empresa-card h2 {
+    font-size: 1.5em;
+    /* Tamanho da fonte do título */
+    margin-bottom: 8px;
+    /* Espaçamento inferior */
+    color: #333;
+    /* Cor do texto */
+}
+
+/* Parágrafos dentro do card */
+.empresa-card p {
+    font-size: 1em;
+    /* Tamanho da fonte dos parágrafos */
+    margin: 4px 0;
+    /* Espaçamento vertical */
+    color: #666;
+    /* Cor do texto */
+}
+
+/* Links para websites e emails */
+.empresa-card a {
+    color: #007BFF;
+    /* Cor azul padrão para links */
+    text-decoration: none;
+    /* Remove sublinhado */
+    font-weight: bold;
+    /* Texto em negrito */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.empresa-card a:hover {
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para o título das seções de informações */
+.empresa-card strong {
+    color: #444;
+    /* Cor levemente mais escura */
+    font-weight: bold;
+    /* Negrito */
+}
+
+/* Estilo para melhorar a visualização em dispositivos menores */
+@media (max-width: 768px) {
+    .empresa-card {
+        padding: 12px;
+        /* Reduz o espaçamento interno */
+        margin: 12px 0;
+        /* Reduz o espaçamento entre os cards */
+    }
+
+    .empresa-card h2 {
+        font-size: 1.3em;
+        /* Tamanho menor para o título */
+    }
+
+    .empresa-card p {
+        font-size: 0.9em;
+        /* Tamanho menor para os parágrafos */
+    }
 }

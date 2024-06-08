@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/root.css">
+    <link rel="shortcut icon" href="../../assets/img/favico.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: var(--bg);
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .profile-info h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .edit-form {
+            max-width: none !important;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edit-form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .edit-form input[type="text"],
+        .edit-form input[type="date"],
+        .edit-form input[type="file"],
+        .edit-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .edit-form textarea {
+            resize: vertical;
+        }
+
+        .edit-form button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="navbar-brand">
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+        <div class="navbar-menu">
+            <ul>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./vagas.php">Vagas</a></li>
+                <li><a href="./especializacao.php">Especialização</a></li>
+                <li><a href="./perfil.php">
+                    <div class="navbar-user">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/kthelypq.json"
+                        trigger="hover"
+                        colors="primary:#2b1b12"
+                        style="width:36px;height:36px">
+                    </lord-icon>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/100" alt="Foto do Usuário" class="profile-pic" id="profilePic">
+            <div class="profile-info">
+                <h2 id="userName">Nome do Usuário</h2>
+                <p id="userEmail">email@exemplo.com</p>
+            </div>
+        </div>
+
+        <form class="edit-form">
+            <label for="profilePicInput">Alterar Foto</label>
+            <input type="file" id="profilePicInput">
+
+            <label for="userNameInput">Nome</label>
+            <input type="text" id="userNameInput" value="Nome do Usuário">
+
+            <label for="userDobInput">Data de Nascimento</label>
+            <input type="date" id="userDobInput" value="1990-01-01">
+
+            <label for="userAddressInput">Endereço</label>
+            <textarea id="userAddressInput" rows="3">Endereço do Usuário</textarea>
+
+            <button type="button" onclick="saveProfile()">Salvar Alterações</button>
+        </form>
+    </div>
+    <footer> <p>Integrantes: 
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
+             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
+             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+        <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
+       
+    </footer>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Função para visualizar e editar a foto do perfil
+        document.getElementById('profilePicInput').addEventListener('change', function(event) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById('profilePic');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        // Função para salvar as alterações
+        function saveProfile() {
+            var userName = document.getElementById('userNameInput').value;
+            var userDob = document.getElementById('userDobInput').value;
+            var userAddress = document.getElementById('userAddressInput').value;
+
+            document.getElementById('userName').innerText = userName;
+
+            // Exibir um alerta de confirmação
+            alert('Perfil atualizado com sucesso!');
+        }
+    </script>
+</body>
+</html>

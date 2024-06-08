@@ -1,0 +1,82 @@
+[
+    {
+        "companyName": "Tech Corp",
+        "location": "São Paulo, SP",
+        "phone": "+55 11 1234-5678",
+        "website": "https://www.techcorp.com",
+        "email": "contact@techcorp.com",
+        "description": "Tech Corp é uma empresa líder em soluções tecnológicas inovadoras, especializada em desenvolvimento de software e consultoria em TI."
+    },
+    {
+        "companyName": "Marketing Experts",
+        "location": "Rio de Janeiro, RJ",
+        "phone": "+55 21 9876-5432",
+        "website": "https://www.marketingexperts.com",
+        "email": "info@marketingexperts.com",
+        "description": "Marketing Experts é uma agência de marketing digital que ajuda empresas a alcançar seus objetivos através de estratégias de marketing criativas e eficazes."
+    },
+    {
+        "companyName": "Innovatech",
+        "location": "Belo Horizonte, MG",
+        "phone": "+55 31 8765-4321",
+        "website": "https://www.innovatech.com",
+        "email": "support@innovatech.com",
+        "description": "Innovatech é conhecida por sua abordagem inovadora na criação de soluções tecnológicas que transformam negócios e impulsionam a eficiência operacional."
+    },
+    {
+        "companyName": "Project Solutions",
+        "location": "Porto Alegre, RS",
+        "phone": "+55 51 2345-6789",
+        "website": "https://www.projectsolutions.com",
+        "email": "projects@projectsolutions.com",
+        "description": "Project Solutions oferece serviços de gestão de projetos, ajudando organizações a planejar, executar e concluir projetos complexos com sucesso."
+    },
+    {
+        "companyName": "Creative Studio",
+        "location": "Curitiba, PR",
+        "phone": "+55 41 9876-5432",
+        "website": "https://www.creativestudio.com",
+        "email": "hello@creativestudio.com",
+        "description": "Creative Studio é um estúdio de design gráfico que cria materiais visuais impressionantes e campanhas de marketing inovadoras para marcas de destaque."
+    },
+    {
+        "companyName": "Tech Solutions",
+        "location": "Fortaleza, CE",
+        "phone": "+55 85 3456-7890",
+        "website": "https://www.techsolutions.com",
+        "email": "sales@techsolutions.com",
+        "description": "Tech Solutions é uma empresa especializada em análise e implementação de soluções tecnológicas que melhoram os processos de negócios e aumentam a produtividade."
+    },
+    {
+        "companyName": "Web Optimizers",
+        "location": "Salvador, BA",
+        "phone": "+55 71 8765-4321",
+        "website": "https://www.weboptimizers.com",
+        "email": "seo@weboptimizers.com",
+        "description": "Web Optimizers foca em otimização de sites e estratégias de SEO para ajudar empresas a melhorar sua presença online e atrair mais visitantes orgânicos."
+    },
+    {
+        "companyName": "HR Consultants",
+        "location": "Recife, PE",
+        "phone": "+55 81 2345-6789",
+        "website": "https://www.hrconsultants.com",
+        "email": "consulting@hrconsultants.com",
+        "description": "HR Consultants oferece consultoria em práticas de recursos humanos, ajudando empresas a implementar estratégias eficazes de gestão de pessoal e desenvolvimento organizacional."
+    },
+    {
+        "companyName": "Network Solutions",
+        "location": "Brasília, DF",
+        "phone": "+55 61 9876-5432",
+        "website": "https://www.networksolutions.com",
+        "email": "network@networksolutions.com",
+        "description": "Network Solutions é especializada em administração de redes e segurança, oferecendo suporte para a infraestrutura de TI de empresas em diversos setores."
+    },
+    {
+        "companyName": "Code Masters",
+        "location": "Florianópolis, SC",
+        "phone": "+55 48 3456-7890",
+        "website": "https://www.codemasters.com",
+        "email": "dev@codemasters.com",
+        "description": "Code Masters é uma empresa de desenvolvimento de software que se destaca pela criação de aplicativos web robustos e escaláveis, utilizando tecnologias de ponta."
+    }
+]

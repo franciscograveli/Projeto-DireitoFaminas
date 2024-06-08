@@ -8,7 +8,7 @@ class HomeController extends BaseController {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }else{
-            $this->render('home/index.php');
+            header('Location: ' . BASE_URL . '../views/home/index.php');
         }
     }
     protected function vagas() {

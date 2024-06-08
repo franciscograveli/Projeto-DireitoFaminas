@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/root.css">
+    <link rel="shortcut icon" href="../../assets/img/favico.ico" type="image/x-icon">
     <title>Vagas em Empresas</title>
     <style>
         /* Estilos básicos */
@@ -12,12 +13,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: var(--bg);
         }
 
         .header {
-            background-color: var(--bg, #4CAF50);
+            position: absolute;
+            z-index: 1;
+            background-color: var(--bg);
+            padding: 1rem 2rem !important;
+            width: 100%;
             color: var(--title-color, white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             padding: 1rem;
         }
@@ -33,18 +41,18 @@
         }
 
         .job-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            flex: 1 1 calc(33.333% - 2rem); /* Ocupa 1/3 da largura menos margens */
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+    background: var(--bg-input);
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
         .job-card:hover {
             transform: translateY(-5px);
@@ -53,7 +61,8 @@
         .job-title {
             font-size: 1.5em;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: var(--title-color);
+            font-weight: bold;
         }
 
         .company {
@@ -68,7 +77,7 @@
 
         .description {
             font-size: 1em;
-            color: #666;
+            color: var(--subtitle-color);
             margin-top: 0.5rem;
             flex-grow: 1;
         }
@@ -124,13 +133,70 @@
                 padding: 0.5rem;
             }
         }
+        section{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        #img-vagas{
+            background-image: url("../../assets/img/bg-vagas.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            filter: blur(2px);
+            z-index: 0;
+        }
+        #img-vagas::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
-   
+<nav class="navbar">
+        <div class="navbar-brand">
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+        <div class="navbar-menu">
+            <ul>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./vagas.php">Vagas</a></li>
+                <li><a href="./especializacao.php">Especialização</a></li>
+                <li><a href="./perfil.php">
+                    <div class="navbar-user">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/kthelypq.json"
+                        trigger="hover"
+                        colors="primary:#2b1b12"
+                        style="width:36px;height:36px">
+                    </lord-icon>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="section img">
     <div class="header">
         <h1>Vagas em Empresas</h1>
     </div>
+        <div id="img-vagas" class="img"></div>
+    </section>
     <div class="container">
         
         <div class="job-card">
