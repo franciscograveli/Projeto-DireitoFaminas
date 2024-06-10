@@ -41,17 +41,17 @@
         }
 
         .job-card {
-    background: var(--bg-input);
-    border: 1px solid #ddd;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    flex: 1 1 calc(33.333% - 2rem);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            flex: 1 1 calc(33.333% - 2rem); /* Ocupa 1/3 da largura menos margens */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 }
 
         .job-card:hover {
@@ -301,6 +301,6 @@
        
     </footer>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="./../../assets/js/script.js"></script>
 </body>
 </html>

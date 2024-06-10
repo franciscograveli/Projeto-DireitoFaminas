@@ -1,3 +1,8 @@
+<?php 
+if(!session_start()){
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -76,6 +81,7 @@
     </style>
 </head>
 <body>
+
 <nav class="navbar">
         <div class="navbar-brand">
             <button class="navbar-toggler" aria-label="Toggle navigation">
@@ -110,20 +116,29 @@
             </div>
         </div>
 
-        <form class="edit-form">
+        <form class="edit-form" >
+        <?php 
+if (isset($_SESSION['user-id'])) {
+    $user_id = $_SESSION['user-id'];
+    echo "<input type='hidden' name='user_id' id='user-id' value='$user_id'>";
+}
+?>
             <label for="profilePicInput">Alterar Foto</label>
-            <input type="file" id="profilePicInput">
+            <input type="file" name="profilePic" id="profilePicInput">
 
             <label for="userNameInput">Nome</label>
-            <input type="text" id="userNameInput" value="Nome do Usuário">
+            <input type="text" name="nome" id="userNameInput" value="Nome do Usuário">
+
+            <label for="userEmailInput">Email</label>
+            <input type="email" name="email" id="userEmailInput" value="email@exemplo.com">
 
             <label for="userDobInput">Data de Nascimento</label>
-            <input type="date" id="userDobInput" value="1990-01-01">
+            <input type="date" name="data_de_nascimento" id="userDobInput" value="1990-01-01">
 
             <label for="userAddressInput">Endereço</label>
-            <textarea id="userAddressInput" rows="3">Endereço do Usuário</textarea>
+            <textarea id="userAddressInput" name="endereco" rows="3">Endereço do Usuário</textarea>
 
-            <button type="button" onclick="saveProfile()">Salvar Alterações</button>
+            <button type="submit" onclick="salvarAlteracoes(this)">Salvar Alterações</button>
         </form>
     </div>
     <footer> <p>Integrantes: 
@@ -137,9 +152,54 @@
        
     </footer>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="./../../assets/js/script.js"></script>
     <script>
-        // Função para visualizar e editar a foto do perfil
+        document.getElementById('profilePicInput').addEventListener('change', function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('profilePic');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+    console.log(event.target.files[0]); // Verifica se o arquivo foi selecionado corretamente
+});
+
+
+        function loadProfile() {
+            var userIdElement = document.getElementById('user-id');
+            if (userIdElement) {
+                var userId = parseInt(userIdElement.value); // Converte o ID para um número inteiro
+
+                fetch(`/Projeto-DireitoFaminas/assets/bd/users.json`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Filtra os dados para encontrar o usuário com o ID correspondente
+                        var user = data.usuarios.find(u => u.id_Usuario === userId);
+
+                        if (user) {
+                            // Se o usuário for encontrado, exiba os dados no console ou em um elemento HTML
+                            console.log(user);
+                            var birthDate = new Date(user.data_de_nascimento);
+                            var formattedDate = birthDate.toISOString().split('T')[0];
+
+                            document.getElementById('userNameInput').value = user.nome;
+                            document.getElementById('userName').innerText = user.nome;
+                            document.getElementById('userEmailInput').value = user.email;
+                            document.getElementById('userEmail').innerText = user.email;
+                            document.getElementById('userDobInput').value = formattedDate;
+                            document.getElementById('userAddressInput').value = user.endereco;  
+                            document.getElementById('userAddressInput').innerText = user.endereco; 
+                            document.getElementById('profilePic').src = user.profilePic? user.profilePic : 'https://via.placeholder.com/100'; 
+                        } else {
+                            console.log('Usuário não encontrado');
+                        }
+                    })
+                    .catch(error => console.error('Erro ao carregar o perfil do usuário:', error));
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadProfile);
+    </script>
+    <script>
         document.getElementById('profilePicInput').addEventListener('change', function(event) {
             var reader = new FileReader();
             reader.onload = function(){
@@ -148,18 +208,37 @@
             };
             reader.readAsDataURL(event.target.files[0]);
         });
-
-        // Função para salvar as alterações
-        function saveProfile() {
-            var userName = document.getElementById('userNameInput').value;
-            var userDob = document.getElementById('userDobInput').value;
-            var userAddress = document.getElementById('userAddressInput').value;
-
-            document.getElementById('userName').innerText = userName;
-
-            // Exibir um alerta de confirmação
-            alert('Perfil atualizado com sucesso!');
-        }
     </script>
+   <script>
+    function salvarAlteracoes() {
+        event.preventDefault();
+        var formData = new FormData(document.querySelector('.edit-form'));
+        
+        fetch('./../../controllers/ProfileController.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); 
+            } else {
+                throw new Error('Erro ao salvar as alterações.');
+            }
+        })
+        .then(data => {
+            console.log(data); 
+             window.location.reload(true);
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+        });
+
+        
+
+    }
+
+    document.querySelector('.edit-form').addEventListener('submit', salvarAlteracoes);
+</script>
+
 </body>
 </html>

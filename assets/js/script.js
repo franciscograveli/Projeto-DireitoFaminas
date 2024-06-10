@@ -6,4 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     toggler.addEventListener('click', function() {
         menu.classList.toggle('active');
     });
+
+    const container = document.querySelector('.container');
+    container.addEventListener('click', function() {
+        if(menu.classList.contains('active')){
+            menu.classList.remove('active');
+        }
+    });
 });
+

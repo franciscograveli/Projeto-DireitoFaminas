@@ -95,10 +95,17 @@ button {
     transition: background-color 0.3s ease;
 }
 
-input {
+input,
+textarea {
     background-color: var(--bg-input);
-    color: var(--input-color);
+    color: var(--input-color) !important;
     width: 100%;
+}
+
+input:focus {
+    outline: none;
+    background-color: var(--bg-input);
+    color: var(--input-color) !important;
 }
 
 button {
@@ -152,6 +159,12 @@ form a {
 form a:hover {
     color: var(--bg-btn);
     text-decoration: underline;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none !important;
 }
 
 .logo {
@@ -175,6 +188,45 @@ form a:hover {
     position: relative;
     top: 0;
     left: 0;
+}
+
+.error-message {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 1rem;
+    font-size: 1rem;
+    color: red;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-weight: 500;
+    align-self: center;
+    width: 100%;
+    max-width: 250px;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.1);
+
+    /* Initially hidden */
+    opacity: 0;
+    /* Start with 0 opacity for the fade-in effect */
+    transition: opacity 0.5s;
+}
+
+.course-card,
+.job-card {
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.132) 0px 0px 20px 10px;
+    transition: .5s;
+    cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 

@@ -261,6 +261,6 @@
         </div>
     </div>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="./../../assets/js/script.js"></script>
 </body>
 </html>

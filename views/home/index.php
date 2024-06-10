@@ -1,3 +1,8 @@
+<?php
+if (!session_start()) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +68,7 @@
        
     </footer>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="./../../assets/js/script.js"></script>
     <script>
    function buscarEmpresa() {
     var inputEmpresas = document.getElementById("input-search-empresa").value.trim().toLowerCase();

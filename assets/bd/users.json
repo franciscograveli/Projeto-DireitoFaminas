@@ -1,0 +1,104 @@
+{
+    "usuarios": [
+        {
+            "id_Usuario": 1,
+            "nome": "Alice TESTTEE",
+            "data_de_nascimento": "1990-04-15",
+            "email": "alice.silva@example.com",
+            "senha": "Alice1234!",
+            "username": "alice.silva",
+            "endereco": "Rua das Flores, 123, Bairro Jardim, Cidade A",
+            "profilePic": ".\/..\/..\/assets\/img\/profiles-pictures\/1717987185.jpg"
+        },
+        {
+            "id_Usuario": 2,
+            "nome": "Bruno Costa",
+            "data_de_nascimento": "1985-09-22",
+            "email": "bruno.costa@example.com",
+            "senha": "Bruno1234!",
+            "username": "bruno.costa",
+            "endereco": "Avenida Central, 456, Bairro Centro, Cidade B",
+            "profilePic": ".\/..\/..\/assets\/img\/profiles-pictures\/profile-2.jpg"
+        },
+        {
+            "id_Usuario": 3,
+            "nome": "Carla Souza",
+            "data_de_nascimento": "1992-07-30",
+            "email": "carla.souza@example.com",
+            "senha": "Carla1234!",
+            "username": "carla.souza",
+            "endereco": "Travessa das Palmeiras, 789, Bairro Parque, Cidade C",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 4,
+            "nome": "Diego Ferreira",
+            "data_de_nascimento": "1988-11-05",
+            "email": "diego.ferreira@example.com",
+            "senha": "Diego1234!",
+            "username": "diego.ferreira",
+            "endereco": "Rua das Pedras, 1011, Bairro Pedreira, Cidade D",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 5,
+            "nome": "Eduarda Pereira",
+            "data_de_nascimento": "1995-02-12",
+            "email": "eduarda.pereira@example.com",
+            "senha": "Eduarda1234!",
+            "username": "eduarda.pereira",
+            "endereco": "Avenida dos Girass\u00f3is, 1212, Bairro Florido, Cidade E",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 6,
+            "nome": "F\u00e1bio Rocha",
+            "data_de_nascimento": "1993-03-17",
+            "email": "fabio.rocha@example.com",
+            "senha": "Fabio1234!",
+            "username": "fabio.rocha",
+            "endereco": "Rua dos Pinheiros, 1414, Bairro Bosque, Cidade F",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 7,
+            "nome": "Gabriela Martins",
+            "data_de_nascimento": "1991-10-25",
+            "email": "gabriela.martins@example.com",
+            "senha": "Gabriela1234!",
+            "username": "gabriela.martins",
+            "endereco": "Avenida das Rosas, 1616, Bairro Rosa, Cidade G",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 8,
+            "nome": "Henrique Alves",
+            "data_de_nascimento": "1989-06-18",
+            "email": "henrique.alves@example.com",
+            "senha": "Henrique1234!",
+            "username": "henrique.alves",
+            "endereco": "Rua das \u00c1rvores, 1818, Bairro \u00c1rvore, Cidade H",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 9,
+            "nome": "Isabela Lima",
+            "data_de_nascimento": "1994-01-08",
+            "email": "isabela.lima@example.com",
+            "senha": "Isabela1234!",
+            "username": "isabela.lima",
+            "endereco": "Avenida dos Lagos, 1919, Bairro Lagoa, Cidade I",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 10,
+            "nome": "Jo\u00e3o Mendes",
+            "data_de_nascimento": "1987-05-19",
+            "email": "joao.mendes@example.com",
+            "senha": "Joao1234!",
+            "username": "joao.mendes",
+            "endereco": "Rua das Montanhas, 2020, Bairro Monte, Cidade J",
+            "profilePic": ""
+        }
+    ]
+}
