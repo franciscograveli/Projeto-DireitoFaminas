@@ -8,12 +8,72 @@
     <link rel="shortcut icon" href="../../assets/img/favico.ico" type="image/x-icon">
     <title>Vagas em Empresas</title>
     <style>
+        * {
+            color: none;
+        }
         /* Estilos básicos */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg);
+            color: var(--title-color) !important;
+        }
+        /* CSS básico para o modal */
+        #jobTitle {
+        color: var(--title-color);
+        }
+        #jobDescription, #jobResponsibilities, #jobRequirements, #jobBenefits, #companySummary, h3, ul, li {
+            color: var(--subtitle-color);
+        }
+        .modal {
+            display: none; /* Inicialmente, o modal não é visível */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 1rem 3rem;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        .modal-header, .modal-body, .modal-footer {
+            margin-bottom: 10px;
+        }
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            flex-direction: column;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .header {
@@ -82,25 +142,6 @@
             flex-grow: 1;
         }
 
-        .apply-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            margin-top: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            align-self: flex-start;
-        }
-
-        .apply-button:hover {
-            background-color: #45a049;
-        }
 
         /* Responsividade */
         @media (max-width: 1024px) {
@@ -128,10 +169,6 @@
                 font-size: 0.9em;
             }
 
-            .apply-button {
-                font-size: 0.9em;
-                padding: 0.5rem;
-            }
         }
         section{
             width: 100%;
@@ -199,97 +236,183 @@
     </section>
     <div class="container">
         
-        <div class="job-card">
-            <div>
-                <div class="job-title">Desenvolvedor Front-end</div>
-                <div class="company">Tech Corp</div>
-                <div class="location">São Paulo, SP</div>
-                <div class="description">Estamos à procura de um Desenvolvedor Front-end experiente para se juntar ao nosso time de desenvolvimento...</div>
-            </div>
-            <button >Candidatar-se</button>
+    <div class="job-card" data-job-id="#201">
+        <div>
+            <div class="job-title">Auxiliar de Dentista</div>
+            <div class="company">Clínica Sorriso</div>
+            <div class="location">São Paulo, SP</div>
+            <div class="description">Estamos em busca de um Auxiliar de Dentista para apoiar nossos dentistas em procedimentos clínicos e cuidar da organização do consultório.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Analista de Marketing Digital</div>
-                <div class="company">Marketing Experts</div>
-                <div class="location">Rio de Janeiro, RJ</div>
-                <div class="description">O Analista de Marketing Digital será responsável por planejar, executar e gerenciar campanhas de marketing digital...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#202">
+        <div>
+            <div class="job-title">Auxiliar de Escritório</div>
+            <div class="company">Serviços Administrativos Ltda</div>
+            <div class="location">Rio de Janeiro, RJ</div>
+            <div class="description">Buscamos um Auxiliar de Escritório para realizar tarefas administrativas, como organização de documentos, atendimento telefônico e suporte geral ao escritório.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Engenheiro de Software</div>
-                <div class="company">Innovatech</div>
-                <div class="location">Belo Horizonte, MG</div>
-                <div class="description">Buscamos um Engenheiro de Software para trabalhar em projetos inovadores e desenvolver soluções de software de alta qualidade...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#203">
+        <div>
+            <div class="job-title">Vendedor</div>
+            <div class="company">Loja de Moda</div>
+            <div class="location">Belo Horizonte, MG</div>
+            <div class="description">Procuramos um Vendedor para atuar no atendimento ao cliente, organização de produtos e realização de vendas.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Gerente de Projetos</div>
-                <div class="company">Project Solutions</div>
-                <div class="location">Porto Alegre, RS</div>
-                <div class="description">Responsável pela coordenação e gestão de projetos complexos para assegurar a entrega no prazo e dentro do orçamento...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#204">
+        <div>
+            <div class="job-title">Operador de Caixa</div>
+            <div class="company">Supermercado Local</div>
+            <div class="location">Porto Alegre, RS</div>
+            <div class="description">Estamos à procura de um Operador de Caixa para processar transações de vendas, auxiliar clientes e manter o caixa organizado.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Designer Gráfico</div>
-                <div class="company">Creative Studio</div>
-                <div class="location">Curitiba, PR</div>
-                <div class="description">Procuramos um Designer Gráfico talentoso para criar materiais visuais inovadores e atraentes para campanhas de marketing...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#205">
+        <div>
+            <div class="job-title">Assistente de Logística</div>
+            <div class="company">TransLog</div>
+            <div class="location">Curitiba, PR</div>
+            <div class="description">Buscamos um Assistente de Logística para ajudar na organização e coordenação de transporte e distribuição de mercadorias.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Analista de Sistemas</div>
-                <div class="company">Tech Solutions</div>
-                <div class="location">Fortaleza, CE</div>
-                <div class="description">O Analista de Sistemas será responsável por analisar, projetar e implementar soluções tecnológicas eficazes para melhorar os processos de negócios...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#206">
+        <div>
+            <div class="job-title">Repositor de Mercadorias</div>
+            <div class="company">Rede de Supermercados</div>
+            <div class="location">Salvador, BA</div>
+            <div class="description">Procuramos um Repositor de Mercadorias para organizar produtos nas prateleiras e garantir a reposição adequada de mercadorias.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Especialista em SEO</div>
-                <div class="company">Web Optimizers</div>
-                <div class="location">Salvador, BA</div>
-                <div class="description">Estamos buscando um Especialista em SEO para melhorar a visibilidade dos nossos sites nos motores de busca e aumentar o tráfego orgânico...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#207">
+        <div>
+            <div class="job-title">Recepcionista</div>
+            <div class="company">Hotelaria Global</div>
+            <div class="location">Brasília, DF</div>
+            <div class="description">Estamos contratando um Recepcionista para atender os clientes, realizar check-ins e check-outs e oferecer suporte nas necessidades dos hóspedes.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Consultor de RH</div>
-                <div class="company">HR Consultants</div>
-                <div class="location">Recife, PE</div>
-                <div class="description">O Consultor de RH será responsável por fornecer consultoria estratégica em práticas de recursos humanos para empresas de diversos setores...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#208">
+        <div>
+            <div class="job-title">Estoquista</div>
+            <div class="company">Distribuidora XYZ</div>
+            <div class="location">Manaus, AM</div>
+            <div class="description">Estamos em busca de um Estoquista para gerenciar o recebimento, a movimentação e a reposição de produtos em nosso armazém.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Administrador de Redes</div>
-                <div class="company">Network Solutions</div>
-                <div class="location">Brasília, DF</div>
-                <div class="description">Procuramos um Administrador de Redes experiente para gerenciar e manter nossa infraestrutura de rede e garantir sua segurança e eficiência...</div>
-            </div>
-           <button >Candidatar-se</button>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#209">
+        <div>
+            <div class="job-title">Assistente Administrativo</div>
+            <div class="company">Consultoria ABC</div>
+            <div class="location">Goiania, GO</div>
+            <div class="description">Procuramos um Assistente Administrativo para fornecer suporte administrativo em nossa empresa, realizando tarefas de escritório e auxiliando em projetos específicos.</div>
         </div>
-        <div class="job-card">
-            <div>
-                <div class="job-title">Desenvolvedor Full Stack</div>
-                <div class="company">Code Masters</div>
-                <div class="location">Florianópolis, SC</div>
-                <div class="description">Estamos buscando um Desenvolvedor Full Stack para criar e manter aplicativos web robustos e escaláveis, utilizando tecnologias modernas...</div>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div class="job-card" data-job-id="#210">
+        <div>
+            <div class="job-title">Auxiliar de Produção</div>
+            <div class="company">Indústria XYZ</div>
+            <div class="location">Fortaleza, CE</div>
+            <div class="description">Estamos contratando um Auxiliar de Produção para auxiliar nas operações de fabricação e garantir a qualidade dos produtos.</div>
+        </div>
+        <button class="">Candidatar-se</button>
+    </div>
+
+    <div id="jobModal" class="modal">
+        <div class="modal-content" style="color: #000;">
+            <div class="modal-header">
+                <span id="jobTitle"></span>
+                <span class="close" onclick="closeModal()">&times;</span>
             </div>
-           <button >Candidatar-se</button>
+            <div class="modal-body">
+                <p id="jobDescription"></p>
+                <h3>Responsabilidades</h3>
+                <ul id="jobResponsibilities"></ul>
+                <h3>Requisitos</h3>
+                <ul id="jobRequirements"></ul>
+                <h3>Benefícios</h3>
+                <ul id="jobBenefits"></ul>
+            </div>
+            <div class="modal-footer">
+                <p id="companySummary"></p>
+                <label for="cv">Anexe seu Curriculo</label>
+                <input type="file" name="cv" id="cv">
+                <button id="applyButton" onclick="applyJob()">Candidatar-se</button>
+            </div>
         </div>
     </div>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function applyJob() {
+            const cv = document.getElementById('cv').files;
+            if (cv.length === 0) {
+                Swal.fire({
+            title: "Ops!",
+            text: `Você precisa adicionar seu curriculo!`,
+            icon: "info"
+            });
+            }else{
+                Swal.fire({
+            title: "Parabéns!",
+            text: `Você está se candidatando à vaga de ${document.getElementById('jobTitle').innerText}`,
+            icon: "success"
+            }).then(() => {
+                closeModal();
+            });
+            }
+            
+        }
+
+        function closeModal() {
+            document.getElementById('jobModal').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const jobCards = document.querySelectorAll('.job-card');
+
+            jobCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const jobId = this.getAttribute('data-job-id');
+                    fetch(`/Projeto-DireitoFaminas/assets/bd/vagas.json`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const job = data.find(job => job.id === jobId);
+                            document.getElementById('jobTitle').innerText = job.title;
+                            document.getElementById('jobDescription').innerText = job.description;
+                            document.getElementById('jobResponsibilities').innerHTML = job.responsibilities.map(responsibility => `<li>${responsibility}</li>`).join('');
+                            document.getElementById('jobRequirements').innerHTML = job.requirements.map(requirement => `<li>${requirement}</li>`).join('');
+                            document.getElementById('jobBenefits').innerHTML = job.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+                            document.getElementById('companySummary').innerText = job.company_summary;
+                            document.getElementById('jobModal').style.display = 'block';
+                        })
+                        .catch(error => {
+                            console.error('Erro ao carregar dados da vaga:', error);
+                        });
+                });
+            });
+        });
+    </script>
     <footer> <p>Integrantes: 
             <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
              <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,

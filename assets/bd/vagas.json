@@ -1,0 +1,232 @@
+[
+    {
+        "id": "#201",
+        "title": "Auxiliar de Dentista",
+        "company": "Clínica Sorriso",
+        "location": "São Paulo, SP",
+        "description": "Estamos em busca de um Auxiliar de Dentista para apoiar nossos dentistas em procedimentos clínicos e cuidar da organização do consultório.",
+        "responsibilities": [
+            "Assistir o dentista em procedimentos odontológicos.",
+            "Esterilizar e preparar instrumentos.",
+            "Agendar consultas e atender pacientes."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Vontade de aprender e crescer na área odontológica.",
+            "Aceitamos candidatos com ou sem experiência prévia."
+        ],
+        "benefits": [
+            "Salário competitivo.",
+            "Vale-transporte e vale-refeição.",
+            "Plano de saúde."
+        ],
+        "company_summary": "A Clínica Sorriso é uma referência em cuidados odontológicos, oferecendo um ambiente de trabalho amigável e oportunidades de desenvolvimento profissional."
+    },
+    {
+        "id": "#202",
+        "title": "Auxiliar de Escritório",
+        "company": "Serviços Administrativos Ltda",
+        "location": "Rio de Janeiro, RJ",
+        "description": "Buscamos um Auxiliar de Escritório para realizar tarefas administrativas, como organização de documentos, atendimento telefônico e suporte geral ao escritório.",
+        "responsibilities": [
+            "Organização de documentos e arquivos.",
+            "Atendimento telefônico e recepção de visitantes.",
+            "Suporte em atividades administrativas diárias."
+        ],
+        "requirements": [
+            "Ensino fundamental ou médio completo.",
+            "Habilidades básicas de informática.",
+            "Boa comunicação e habilidades organizacionais."
+        ],
+        "benefits": [
+            "Salário fixo.",
+            "Vale-transporte.",
+            "Ambiente de trabalho colaborativo."
+        ],
+        "company_summary": "A Serviços Administrativos Ltda é uma empresa especializada em oferecer soluções administrativas para diversos setores, proporcionando um ambiente de trabalho estável e com possibilidades de crescimento."
+    },
+    {
+        "id": "#203",
+        "title": "Vendedor",
+        "company": "Loja de Moda",
+        "location": "Belo Horizonte, MG",
+        "description": "Procuramos um Vendedor para atuar no atendimento ao cliente, organização de produtos e realização de vendas.",
+        "responsibilities": [
+            "Atendimento ao cliente e suporte em suas necessidades.",
+            "Organização e reposição de produtos na loja.",
+            "Realização de vendas e fechamento de caixa."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Boa comunicação e habilidades de venda.",
+            "Experiência em vendas é desejável, mas não essencial."
+        ],
+        "benefits": [
+            "Salário base mais comissão.",
+            "Descontos em produtos da loja.",
+            "Oportunidades de treinamento e desenvolvimento."
+        ],
+        "company_summary": "A Loja de Moda é uma referência no setor de vestuário em Belo Horizonte, oferecendo aos seus clientes uma experiência de compra única e personalizada."
+    },
+    {
+        "id": "#204",
+        "title": "Operador de Caixa",
+        "company": "Supermercado Local",
+        "location": "Porto Alegre, RS",
+        "description": "Estamos à procura de um Operador de Caixa para processar transações de vendas, auxiliar clientes e manter o caixa organizado.",
+        "responsibilities": [
+            "Processar pagamentos de clientes.",
+            "Manter o caixa organizado e registrar transações com precisão.",
+            "Atender os clientes com cordialidade."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Habilidades básicas de matemática.",
+            "Experiência prévia não é necessária."
+        ],
+        "benefits": [
+            "Salário fixo.",
+            "Vale-transporte e vale-alimentação.",
+            "Ambiente de trabalho dinâmico e amistoso."
+        ],
+        "company_summary": "O Supermercado Local é conhecido por sua excelência no atendimento ao cliente e pela qualidade de seus produtos, proporcionando um ambiente de trabalho acolhedor e inclusivo."
+    },
+    {
+        "id": "#205",
+        "title": "Assistente de Logística",
+        "company": "TransLog",
+        "location": "Curitiba, PR",
+        "description": "Buscamos um Assistente de Logística para ajudar na organização e coordenação de transporte e distribuição de mercadorias.",
+        "responsibilities": [
+            "Apoio na coordenação das atividades de logística.",
+            "Monitoramento do transporte e distribuição de mercadorias.",
+            "Auxílio na gestão de estoque e pedidos."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Habilidades básicas de informática.",
+            "Boa capacidade de organização e comunicação."
+        ],
+        "benefits": [
+            "Salário fixo.",
+            "Vale-transporte e vale-refeição.",
+            "Plano de saúde e odontológico."
+        ],
+        "company_summary": "A TransLog é uma empresa líder em soluções logísticas, conhecida por sua eficiência e inovação no transporte e distribuição de mercadorias."
+    },
+    {
+        "id": "#206",
+        "title": "Repositor de Mercadorias",
+        "company": "Rede de Supermercados",
+        "location": "Salvador, BA",
+        "description": "Procuramos um Repositor de Mercadorias para organizar produtos nas prateleiras e garantir a reposição adequada de mercadorias.",
+        "responsibilities": [
+            "Organização de produtos nas prateleiras.",
+            "Garantir a reposição adequada e a organização do estoque.",
+            "Auxiliar clientes quando necessário."
+        ],
+        "requirements": [
+            "Ensino fundamental completo.",
+            "Capacidade de levantar caixas e itens pesados.",
+            "Habilidade para trabalhar de forma eficiente e independente."
+        ],
+        "benefits": [
+            "Salário fixo.",
+            "Vale-transporte e vale-alimentação.",
+            "Descontos em produtos da loja."
+        ],
+        "company_summary": "A Rede de Supermercados é conhecida por oferecer uma ampla variedade de produtos e um excelente atendimento ao cliente, com um ambiente de trabalho inclusivo e colaborativo."
+    },
+    {
+        "id": "#207",
+        "title": "Recepcionista",
+        "company": "Hotelaria Global",
+        "location": "Brasília, DF",
+        "description": "Estamos contratando um Recepcionista para atender os clientes, realizar check-ins e check-outs e oferecer suporte nas necessidades dos hóspedes.",
+        "responsibilities": [
+            "Recepcionar e atender hóspedes.",
+            "Realizar check-ins e check-outs.",
+            "Fornecer informações e suporte aos hóspedes durante sua estadia."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Boa comunicação e habilidades interpessoais.",
+            "Experiência na área de recepção é desejável, mas não essencial."
+        ],
+        "benefits": [
+            "Salário fixo.",
+            "Plano de saúde e odontológico.",
+            "Descontos em serviços do hotel."
+        ],
+        "company_summary": "A Hotelaria Global é uma cadeia de hotéis de renome internacional, oferecendo aos seus funcionários um ambiente de trabalho dinâmico e oportunidades de crescimento profissional."
+    },
+    {
+        "id": "#208",
+        "title": "Estoquista",
+        "company": "Distribuidora XYZ",
+        "location": "Manaus, AM",
+        "description": "Estamos em busca de um Estoquista para gerenciar o recebimento, a movimentação e a reposição de produtos em nosso armazém.",
+        "responsibilities": [
+            "Receber, conferir e armazenar produtos.",
+            "Realizar a movimentação e a organização do estoque.",
+            "Garantir a precisão nos registros de entrada e saída de produtos."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Habilidades básicas de informática.",
+            "Capacidade de trabalhar de forma eficiente em um ambiente de ritmo acelerado."
+        ],
+        "benefits": [
+            "Salário competitivo.",
+            "Vale-transporte e vale-refeição.",
+            "Oportunidades de crescimento na empresa."
+        ],
+        "company_summary": "A Distribuidora XYZ é líder na distribuição de produtos na região, oferecendo um ambiente de trabalho desafiador e oportunidades de desenvolvimento profissional."
+    },
+    {
+        "id": "#209",
+        "title": "Assistente Administrativo",
+        "company": "Consultoria ABC",
+        "location": "Goiania, GO",
+        "description": "Procuramos um Assistente Administrativo para fornecer suporte administrativo em nossa empresa, realizando tarefas de escritório e auxiliando em projetos específicos.",
+        "responsibilities": [
+            "Realizar tarefas administrativas, como agendamento de reuniões, preparação de documentos e organização de arquivos.",
+            "Fornecer suporte em projetos específicos, como pesquisa de mercado e análise de dados.",
+            "Auxiliar em outras tarefas administrativas conforme necessário."
+        ],
+        "requirements": [
+            "Ensino médio completo.",
+            "Habilidades de comunicação escrita e verbal.",
+            "Conhecimento básico de ferramentas de produtividade, como Microsoft Office."
+        ],
+        "benefits": [
+            "Salário competitivo.",
+            "Vale-transporte e vale-refeição.",
+            "Oportunidades de aprendizado e desenvolvimento profissional."
+        ],
+        "company_summary": "A Consultoria ABC oferece serviços de consultoria em gestão de negócios, ajudando empresas a alcançarem seus objetivos de forma eficiente e sustentável."
+    },
+    {
+        "id": "#210",
+        "title": "Auxiliar de Produção",
+        "company": "Indústria XYZ",
+        "location": "Fortaleza, CE",
+        "description": "Estamos contratando um Auxiliar de Produção para auxiliar nas operações de fabricação e garantir a qualidade dos produtos.",
+        "responsibilities": [
+            "Auxiliar nas operações de fabricação, seguindo padrões de qualidade e segurança.",
+            "Realizar inspeções de qualidade e relatar qualquer problema identificado.",
+            "Manter a área de trabalho limpa e organizada."
+        ],
+        "requirements": [
+            "Ensino fundamental completo.",
+            "Capacidade de trabalhar em equipe.",
+            "Disponibilidade para trabalhar em turnos."
+        ],
+        "benefits": [
+            "Salário competitivo.",
+            "Benefícios adicionais conforme a legislação trabalhista.",
+            "Oportunidades de crescimento na empresa."
+        ],
+        "company_summary": "A Indústria XYZ é uma empresa líder na fabricação de produtos de alta qualidade, comprometida com a excelência operacional e a satisfação do cliente."
+    }
+]

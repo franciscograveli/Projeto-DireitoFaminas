@@ -2,13 +2,13 @@
     "usuarios": [
         {
             "id_Usuario": 1,
-            "nome": "Alice TESTTEE",
+            "nome": "Alice kijijikokk",
             "data_de_nascimento": "1990-04-15",
             "email": "alice.silva@example.com",
             "senha": "Alice1234!",
             "username": "alice.silva",
             "endereco": "Rua das Flores, 123, Bairro Jardim, Cidade A",
-            "profilePic": ".\/..\/..\/assets\/img\/profiles-pictures\/1717987185.jpg"
+            "profilePic": ".\/..\/..\/assets\/img\/profiles-pictures\/1718062668.png"
         },
         {
             "id_Usuario": 2,

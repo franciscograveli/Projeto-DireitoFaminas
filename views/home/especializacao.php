@@ -194,7 +194,7 @@
                 <div class="course-title">Curso de Front-end</div>
                 <div class="description">Aprenda os fundamentos do desenvolvimento front-end, incluindo HTML, CSS e JavaScript.</div>
             </div>
-            <button type="button" href="https://www.youtube.com/watch?v=video1" target="_blank" class="">Acessar Curso</button>
+            <a href="https://www.youtube.com/watch?v=video1" target="_blank" class=""> <button type="button"  href="https://www.youtube.com/watch?v=video2" target="_blank" >Acessar Curso</button></a>
         </div>
         <div class="course-card">
             <div>
@@ -260,6 +260,16 @@
             <button type="button"  href="https://www.youtube.com/watch?v=video10" target="_blank" >Acessar Curso</button>
         </div>
     </div>
+    <footer> <p>Integrantes: 
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
+             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
+             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+        <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
+       
+    </footer>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="./../../assets/js/script.js"></script>
 </body>

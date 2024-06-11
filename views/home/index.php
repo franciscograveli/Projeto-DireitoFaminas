@@ -23,6 +23,7 @@ if (!session_start()) {
         <div class="navbar-menu">
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="./blog.php">Blog</a></li>
                 <li><a href="./vagas.php">Vagas</a></li>
                 <li><a href="./especializacao.php">Especialização</a></li>
                 <li><a href="./perfil.php">

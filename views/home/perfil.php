@@ -226,7 +226,6 @@ if (isset($_SESSION['user-id'])) {
             }
         })
         .then(data => {
-            console.log(data); 
              window.location.reload(true);
         })
         .catch(error => {
