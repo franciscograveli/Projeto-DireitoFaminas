@@ -1,3 +1,8 @@
+<?php
+ if (!session_start()) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +13,6 @@
     <link rel="stylesheet" href="../../assets/css/root.css">
     <title>Como Criar um Currículo em 7 Passos</title>
     <style>
-        body {
-            font-size: 18px;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: var(--bg-main);
-        }
         header {
             background-color: var(--bg);
             color: #fff;
@@ -30,17 +28,24 @@
             width: 80%;
             margin: auto;
             padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: var(--bg-main);
         }
         h1 {
             color: var(--title-color);
             width: 100%;
             min-width: 100%;
         }
-        h3, b{
+        h3{
             color: var(--subtitle-color);
         }
         h3 span{
             font-weight: bolder;
+        }
+        b{
+            font-weight: bolder;
+            color: var(--bg-btn);
         }
 
         p,span,ul,li {
@@ -63,6 +68,52 @@
                 font-size: 1.8rem;
             }
         }
+        section{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+     
+        
+        #img-blog{
+            background-image: url("../../assets/img/bg-blog.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            filter: blur(2px);
+            z-index: 0;
+            position: relative;
+        }
+        #img-blog::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .header {
+            position: absolute;
+            z-index: 1;
+            background-color: var(--bg);
+            padding: 1rem 2rem !important;
+            width: 100%;
+            color: var(--title-color, white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
     </style>
 </head>
 <body>
@@ -74,8 +125,10 @@
         </div>
         <div class="navbar-menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./blog.php">Blog</a></li>
+              
+                <?php if (isset($_SESSION['user-id'])): ?>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="#">Blog</a></li>
                 <li><a href="./vagas.php">Vagas</a></li>
                 <li><a href="./especializacao.php">Especialização</a></li>
                 <li><a href="./perfil.php">
@@ -89,13 +142,22 @@
                     </div>
                     </a>
                 </li>
+                <li id="closeLi"><a class="close-session" href="../../index.php"><img src="../../assets/img/close.png" alt="Close" width="24" height="24"></a></li>
+            <?php else: ?>
+                <li><a href="/Projeto-DireitoFaminas">Home</a></li>
+                <li><a href="#">Blog</a></li>
+            <?php endif; ?>
+                
             </ul>
         </div>
     </nav>
-    <header>
-        <h1>Como Criar um Currículo em 7 Passos</h1>
-    </header>
-
+   
+    <section class="section img">
+    <div class="header">
+        <h1>Como Criar um Currículo em <b>7 Passos</b></h1>
+    </div>
+        <div id="img-blog" class="img"></div>
+    </section>
     <div class="container">
         <article>
             <h3 class="wp-block-heading" id="h-elementos-essenciais-para-um-curriculo">
@@ -167,8 +229,13 @@
                 <span style="font-weight: 400;">
                     , divididos de acordo com o assunto. Assim, você pode definir seções do currículo para as experiências profissionais, outras para os cursos e formações e assim por diante.&nbsp;</span>
             </p>
-
-            1. Utilize uma formatação limpa e profissional</span>
+            <h3 class="wp-block-heading" id="h-secoes-e-subsecoes">
+                    <span style="font-weight: 400;">
+                    Os 7 passos para criar um currículo:</span>
+            </h3>
+            <h3 class="wp-block-heading" id="h-2-destaque-conquistas-relevantes">
+            <span style="font-weight: 400;">
+            <b>1.</b> Utilize uma formatação limpa e profissional</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -192,7 +259,7 @@
         </p>
             <h3 class="wp-block-heading" id="h-2-destaque-conquistas-relevantes">
                 <span style="font-weight: 400;">
-                2. Destaque conquistas relevantes</span>
+                <b>2.</b> Destaque conquistas relevantes</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -212,7 +279,7 @@
         </p>
             <h3 class="wp-block-heading" id="h-3-adapte-seu-curriculo-para-cada-oportunidade">
                 <span style="font-weight: 400;">
-                3. Adapte seu currículo para cada oportunidade</span>
+                <b>3.</b> Adapte seu currículo para cada oportunidade</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -228,7 +295,7 @@
         </p>
             <h3 class="wp-block-heading" id="h-4-destaque-habilidades-importantes-para-a-vaga">
                 <span style="font-weight: 400;">
-                4. Destaque habilidades importantes para a vaga</span>
+                <b>4.</b> Destaque habilidades importantes para a vaga</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -248,7 +315,7 @@
         </p>
             <h3 class="wp-block-heading" id="h-5-use-palavras-chave-relevantes-para-a-area">
                 <span style="font-weight: 400;">
-                5. Use palavras-chave relevantes para a área</span>
+                <b>5.</b> Use palavras-chave relevantes para a área</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -272,7 +339,7 @@
         </p>
             <h3 class="wp-block-heading" id="h-6-faca-uma-revisao-cuidadosa">
                 <span style="font-weight: 400;">
-                6. Faça uma revisão cuidadosa</span>
+                <b>6.</b> Faça uma revisão cuidadosa</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -288,7 +355,7 @@
         </p>
             <h3 class="wp-block-heading" id="h-7-mantenha-o-curriculo-sempre-atualizado">
                 <span style="font-weight: 400;">
-                7. Mantenha o currículo sempre atualizado</span>
+                <b>7.</b> Mantenha o currículo sempre atualizado</span>
         </h3>
             <p>
                 <span style="font-weight: 400;">
@@ -302,13 +369,13 @@
              </article>
     </div>
 <div class="fonte"><a id="link-fonte" href="https://blog.solides.com.br/fazer-um-bom-curriculo/" target="_blank">Fonte</a></div>
-    <footer> <p>Integrantes: 
-            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
-             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
-             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
-             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
-             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
-            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+<footer> <p>Integrantes:     
+            <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+            <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/greicesilva_1/">Greiciele</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a>,
+            <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a></p>
         <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
        
     </footer>

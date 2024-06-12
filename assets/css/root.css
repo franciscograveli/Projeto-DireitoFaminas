@@ -75,8 +75,42 @@
     transition: .5s;
 }
 
+
+.navbar-menu ul li .close-session,
+#closeLi {
+    position: absolute !important;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#closeLi {
+    top: 2rem;
+}
+
+#closeLi:hover {
+    transform: translate(0, 0px) !important;
+
+}
+
+.navbar-menu ul li .close-session:hover {
+    display: block !important;
+    transform: translate(0, 0) !important;
+
+}
+
+@media (max-width: 768px) {
+    .navbar-menu ul li .close-session {
+        position: relative !important;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+
+
     .navbar {
         flex-direction: column;
         align-items: center;

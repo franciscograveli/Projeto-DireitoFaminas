@@ -62,7 +62,8 @@
         .course-title {
             font-size: 1.5em;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: var(--title-color);
+            font-weight: bold;
         }
 
         .description {
@@ -142,6 +143,7 @@
             height: 100%;
             filter: blur(2px);
             z-index: 0;
+            position: relative;
         }
         #img-especializacao::after{
             content: "";
@@ -152,6 +154,9 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
+        }
+        button{
+            margin: .5rem;
         }
     </style>
 </head>
@@ -165,8 +170,9 @@
         <div class="navbar-menu">
             <ul>
                 <li><a href="./index.php">Home</a></li>
+                <li><a href="./blog.php">Blog</a></li>
                 <li><a href="./vagas.php">Vagas</a></li>
-                <li><a href="./especializacao.php">Especialização</a></li>
+                <li><a href="#">Especialização</a></li>
                 <li><a href="./perfil.php">
                     <div class="navbar-user">
                     <lord-icon
@@ -178,6 +184,7 @@
                     </div>
                     </a>
                 </li>
+                <li id="closeLi"><a class="close-session" href="../../index.php"><img src="../../assets/img/close.png" alt="Close" width="24" height="24"></a></li>
             </ul>
         </div>
     </nav>
@@ -191,8 +198,8 @@
     <div class="container">
         <div class="course-card">
             <div>
-                <div class="course-title">Curso de Front-end</div>
-                <div class="description">Aprenda os fundamentos do desenvolvimento front-end, incluindo HTML, CSS e JavaScript.</div>
+                <div class="course-title">Auxiliar de Saúde Bucal</div>
+                <div class="description">Essa qualificação visa proporcionar ao aluno os elementos essenciais para atingir um perfil profissional adequado e pretendido de auxiliar de saúde bucal.</div>
             </div>
             <a href="https://www.youtube.com/watch?v=video1" target="_blank" class=""> <button type="button"  href="https://www.youtube.com/watch?v=video2" target="_blank" >Acessar Curso</button></a>
         </div>
@@ -205,8 +212,8 @@
         </div>
         <div class="course-card">
             <div>
-                <div class="course-title">Engenharia de Software</div>
-                <div class="description">Entenda os princípios da engenharia de software e como aplicá-los em projetos reais.</div>
+                <div class="course-title">Auxiliar de Escritório</div>
+                <div class="description">O curso de Auxiliar de Escritório visa preparar o profissional para prestar apoio às atividades rotineiras, controle de arquivos, administração do tempo, gestão da agenda e reuniões, redação de documentos entre outras atividades.</div>
             </div>
             <button type="button"  href="https://www.youtube.com/watch?v=video3" target="_blank" >Acessar Curso</button>
         </div>
@@ -219,8 +226,8 @@
         </div>
         <div class="course-card">
             <div>
-                <div class="course-title">Design Gráfico</div>
-                <div class="description">Explore as técnicas de design gráfico e crie peças visuais impactantes.</div>
+                <div class="course-title">Fundamentos de Vendas</div>
+                <div class="description">Neste curso você vai aprender a enxergar pela perspectiva dos seus clientes. Ele descreve estratégias para ajudar você a se relacionar e a entender as necessidades dos seus clientes.</div>
             </div>
             <button type="button"  href="https://www.youtube.com/watch?v=video5" target="_blank" >Acessar Curso</button>
         </div>
@@ -247,8 +254,8 @@
         </div>
         <div class="course-card">
             <div>
-                <div class="course-title">Administração de Redes</div>
-                <div class="description">Domine os conceitos de administração de redes e mantenha sistemas seguros e eficientes.</div>
+                <div class="course-title">Recepcionista</div>
+                <div class="description">Você aprenderá a usar técnicas de atendimento presencial, virtual e telefônico em empresas e organizações para fazer uma recepção de qualidade aos clientes e ao público em geral.</div>
             </div>
             <button type="button"  href="https://www.youtube.com/watch?v=video9" target="_blank" >Acessar Curso</button>
         </div>
@@ -260,13 +267,13 @@
             <button type="button"  href="https://www.youtube.com/watch?v=video10" target="_blank" >Acessar Curso</button>
         </div>
     </div>
-    <footer> <p>Integrantes: 
-            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
-             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
-             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
-             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
-             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
-            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+    <footer> <p>Integrantes:     
+            <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+            <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/greicesilva_1/">Greiciele</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a>,
+            <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a></p>
         <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
        
     </footer>

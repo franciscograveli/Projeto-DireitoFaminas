@@ -188,6 +188,7 @@
             height: 100%;
             filter: blur(2px);
             z-index: 0;
+            position: relative;
         }
         #img-vagas::after{
             content: "";
@@ -211,7 +212,8 @@
         <div class="navbar-menu">
             <ul>
                 <li><a href="./index.php">Home</a></li>
-                <li><a href="./vagas.php">Vagas</a></li>
+                <li><a href="./blog.php">Blog</a></li>
+                <li><a href="#">Vagas</a></li>
                 <li><a href="./especializacao.php">Especialização</a></li>
                 <li><a href="./perfil.php">
                     <div class="navbar-user">
@@ -224,6 +226,7 @@
                     </div>
                     </a>
                 </li>
+                <li id="closeLi"><a class="close-session" href="../../index.php"><img src="../../assets/img/close.png" alt="Close" width="24" height="24"></a></li>
             </ul>
         </div>
     </nav>
@@ -413,13 +416,13 @@
             });
         });
     </script>
-    <footer> <p>Integrantes: 
-            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
-             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
-             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
-             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
-             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
-            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+     <footer> <p>Integrantes:     
+            <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+            <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/greicesilva_1/">Greiciele</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a>,
+            <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a></p>
         <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
        
     </footer>

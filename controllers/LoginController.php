@@ -11,6 +11,12 @@ session_start();
 
 $user = new User();
 
+if (isset($_SESSION['user']) && !isset($_GET['close-session'])) {
+    session_destroy();
+    header('Location: /Projeto-DireitoFaminas/index.php');
+    exit;
+}
+
 if (isset($_POST['username']) && isset($_POST['password'])) {
     
     $username = $_POST['username'];

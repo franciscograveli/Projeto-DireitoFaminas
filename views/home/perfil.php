@@ -91,9 +91,10 @@ if(!session_start()){
         <div class="navbar-menu">
             <ul>
                 <li><a href="./index.php">Home</a></li>
+                <li><a href="./blog.php">Blog</a></li>
                 <li><a href="./vagas.php">Vagas</a></li>
                 <li><a href="./especializacao.php">Especialização</a></li>
-                <li><a href="./perfil.php">
+                <li><a href="#">
                     <div class="navbar-user">
                     <lord-icon
                         src="https://cdn.lordicon.com/kthelypq.json"
@@ -104,6 +105,7 @@ if(!session_start()){
                     </div>
                     </a>
                 </li>
+                <li id="closeLi"><a class="close-session" href="../../index.php"><img src="../../assets/img/close.png" alt="Close" width="24" height="24"></a></li>
             </ul>
         </div>
     </nav>
@@ -141,13 +143,13 @@ if (isset($_SESSION['user-id'])) {
             <button type="submit" onclick="salvarAlteracoes(this)">Salvar Alterações</button>
         </form>
     </div>
-    <footer> <p>Integrantes: 
-            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
-             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
-             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
-             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
-             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
-            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+    <footer> <p>Integrantes:     
+            <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+            <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/greicesilva_1/">Greiciele</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a>,
+            <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a></p>
         <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
        
     </footer>

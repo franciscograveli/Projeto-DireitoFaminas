@@ -37,11 +37,12 @@ if (!session_start()) {
                     </div>
                     </a>
                 </li>
+                <li id="closeLi"><a class="close-session" href="../../index.php"><img src="../../assets/img/close.png" alt="Close" width="24" height="24"></a></li>
             </ul>
         </div>
     </nav>
     
-    <div class="main bg d-column ">
+    <div class="main bg d-column container">
         <div class="p-2 d-column self-start w-100">
         <h1>Você no mercado de trabalho!</h1>
         <h2>Encontre vagas de empresas parceiras dispostas a te receber e reintegrar ao mercado de trabalho.</h2>
@@ -58,13 +59,13 @@ if (!session_start()) {
 
     </div>
     
-    <footer> <p>Integrantes: 
-            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a>,
-             <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
-             <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
-             <a href="https://www.instagram.com/greicesilva_1/">Greice</a>,
-             <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
-            <a href="https://www.instagram.com/florrane/">Lorrane</a></p>
+    <footer> <p>Integrantes:     
+            <a href="https://www.instagram.com/emanuel.alef_/">Alef</a>,
+            <a href="https://www.instagram.com/erickdepaula7/">Erick</a>,
+            <a href="https://www.instagram.com/greicesilva_1/">Greiciele</a>,
+            <a href="https://www.instagram.com/florrane/">Lorrane</a>,
+            <a href="https://www.instagram.com/noelmacarvalhof/">Noelma</a>,
+            <a href="https://www.instagram.com/paolla_hellenaa/">Paolla</a></p>
         <p>Copyright © <?php echo date('Y'); ?>. Todos direitos reservados.</p>
        
     </footer>
@@ -116,8 +117,6 @@ if (!session_start()) {
             });
     }
 }
-
-
     </script>
 </body>
 </html>

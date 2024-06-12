@@ -47,12 +47,12 @@
             "email": "eduarda.pereira@example.com",
             "senha": "Eduarda1234!",
             "username": "eduarda.pereira",
-            "endereco": "Avenida dos Girass\u00f3is, 1212, Bairro Florido, Cidade E",
+            "endereco": "Avenida dos Girassóis, 1212, Bairro Florido, Cidade E",
             "profilePic": ""
         },
         {
             "id_Usuario": 6,
-            "nome": "F\u00e1bio Rocha",
+            "nome": "Fábio Rocha",
             "data_de_nascimento": "1993-03-17",
             "email": "fabio.rocha@example.com",
             "senha": "Fabio1234!",
@@ -77,7 +77,7 @@
             "email": "henrique.alves@example.com",
             "senha": "Henrique1234!",
             "username": "henrique.alves",
-            "endereco": "Rua das \u00c1rvores, 1818, Bairro \u00c1rvore, Cidade H",
+            "endereco": "Rua das Árvores, 1818, Bairro Árvore, Cidade H",
             "profilePic": ""
         },
         {
@@ -92,12 +92,102 @@
         },
         {
             "id_Usuario": 10,
-            "nome": "Jo\u00e3o Mendes",
+            "nome": "João Mendes",
             "data_de_nascimento": "1987-05-19",
             "email": "joao.mendes@example.com",
             "senha": "Joao1234!",
             "username": "joao.mendes",
             "endereco": "Rua das Montanhas, 2020, Bairro Monte, Cidade J",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 11,
+            "nome": "FRANCISCO CARLOS DE ASSIS SANTOS JUNIOR",
+            "data_de_nascimento": "2003-07-15",
+            "email": "fcdasj@hotmail.com",
+            "senha": "$2y$10$NSkr\/3Dy33Ww659E3l965O7uYL.7XAesZhBAD1lf2X.h2hvZeFyX2",
+            "username": "junior",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 12,
+            "nome": "FRANCISCO CARLOS DE ASSIS SANTOS JUNIOR",
+            "data_de_nascimento": "2003-07-15",
+            "email": "fcdasj@hotmail.com",
+            "senha": "$2y$10$.AAClhEkFzEMDzpk1xp1E.GcXxriG1ckSJ2CBsPV983iCQa5pEh3u",
+            "username": "junior",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 13,
+            "nome": "FRANCISCO CARLOS DE ASSIS SANTOS JUNIOR",
+            "data_de_nascimento": "2003-07-15",
+            "email": "fcdasj@hotmail.com",
+            "senha": "$2y$10$s1POmmnB1aHAOQno\/eoJ6.e8lYp6oT4JJm.dUIHvVbqNkGQ.4KISS",
+            "username": "junior",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 14,
+            "nome": "teste",
+            "data_de_nascimento": "2003-07-15",
+            "email": "teste@teste.com",
+            "senha": "$2y$10$ggNtsbZxhuj\/YjSqEBNneux20h0arqbeOH.hV6tN1X3RSZ.Ee7BzG",
+            "username": "teste",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 15,
+            "nome": "teste",
+            "data_de_nascimento": "2003-07-15",
+            "email": "teste@teste.com",
+            "senha": "$2y$10$ecDEE7UBLJQqGor7wuFnsOXtIfMLVwxuHXPT66fx\/O0RfQCZtNqaW",
+            "username": "teste",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 16,
+            "nome": "teste",
+            "data_de_nascimento": "2000-11-11",
+            "email": "teste@teste.com",
+            "senha": "teste",
+            "username": "teste",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 17,
+            "nome": "1234",
+            "data_de_nascimento": "2001-11-11",
+            "email": "teste@teste.com",
+            "senha": "1234",
+            "username": "1234",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 18,
+            "nome": "teste",
+            "data_de_nascimento": "111111-11-11",
+            "email": "teste@teste.com",
+            "senha": "1234",
+            "username": "1234",
+            "endereco": "",
+            "profilePic": ""
+        },
+        {
+            "id_Usuario": 19,
+            "nome": "1234",
+            "data_de_nascimento": "111111-11-11",
+            "email": "111111@hotmail.com",
+            "senha": "11",
+            "username": "11",
+            "endereco": "",
             "profilePic": ""
         }
     ]
